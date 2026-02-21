@@ -19,8 +19,6 @@ int main() {
 
     ///левый операнд передается в указатель this   , а правый заходит параметром
 
-    Point p1(1, 2);
-    Point p2(3, 4);
 
     ///if (p2>p1)
 
@@ -41,13 +39,13 @@ int main() {
     //rez.Show();*/
 
 
-    Point rez2 = p1 + 2;//// operator + визивається для лівого операнда p1(this),праввий операнд число 2 заходить параметром
+   // Point rez2 = p1 + 2;//// operator + визивається для лівого операнда p1(this),праввий операнд число 2 заходить параметром
     //                    //// Point operator+ (int numb)const;
 
-    rez2.Show();
+   // rez2.Show();
 
 
-    Point rez3 = 2 + p1;/////////Глобальними функціями
+   // Point rez3 = 2 + p1;/////////Глобальними функціями
     //                    ///////  Point operator+(int number, const Point & obj)///// перегрузка глобальною функцією  int+Point
     //                    //////    Point operator+( const Point & obj, int number,)////перегрузка глобальною функцією  Poin+int
 
@@ -90,6 +88,55 @@ int main() {
 
     // (++obj)++;//////	 Point& operator ++();
     //obj.Show();
+
+    //дз
+
+    Point p1(1, 2);
+    Point p2(3, 4);
+    Point p3(10, 10);
+
+    Point res1 = p1 - p2;
+    res1.Show();
+
+    Point res2 =  p1 / p2;
+    res2.Show();
+
+    Point res3 = p1 * p2;
+    res3.Show();
+
+    int num = 3;
+
+    p3 -= num;
+    p3.Show();
+
+    p3 /= num;
+    p3.Show();
+
+    p3 *= num;
+    p3.Show();
+
+    cout << "p1 >= p2 " << (p1 >= p2 ? "true" : "false") << endl;
+
+    cout << "p1 < p2 " << (p1  < p2 ? "true" : "false") << endl;
+
+    cout << "p1 <= p2 " << (p1 <= p2 ? "true" : "false") << endl;
+
+    cout << "p1 != p2 " << (p1 != p2 ? "true" : "false") << endl;
+
+    --p1;
+    p1.Show();
+
+    Point temp = p2--;
+    temp.Show();
+    p2.Show();
+
+
+
+
+
+
+
+
 
 
 
